@@ -7,13 +7,12 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // import routes
-// const blog =require("./routes/blog");
+const blog =require("./routes/blog");
 // // mount
-// app.use("/api/v1",blog);
+app.use("/api/v1",blog);
 
 // connect to db
 const connectWithDB = require("./config/database");
-
 connectWithDB();
 
 // start the server
